@@ -58,17 +58,38 @@
             <input type="text" name="firstname" id="firstname" class="firstname" placeholder="Enter Firstname">
             <input type="text" name="lastname" id="lastname" class="lastname" placeholder="Enter Lastname">
             <input type="email" name="email" id="email" class="email" placeholder="Enter Email" required>
+            <span class="not_ok">Email Already Taken</span>
+            <span class="ok">Email Available</span>
             <input type="password" name="password" id="password" class="password" placeholder="Enter Password">
             <button type="submit" name="submit">Sign Up</button>
         </form>
     </div>
     <script>
         let email   =   document.querySelector('.email');
-        console.log(email);
-        email.addEventListener("keypress", (event)=>
+        let ok   =   document.querySelector('.ok');
+        let notok   =   document.querySelector('.not_ok');
+        // console.log(email);
+        email.addEventListener("keyup", (event)=>
         {
-            console.log("KeyPressed");
-            let xhttp   =   new XMLHttpRequest();
+            // console.log("KeyPressed");
+            const xhttp =   new XMLHttpRequest();
+            xhttp.onload =   function()
+            {
+                let response   =   this.responseText;
+                if (response == 0)
+                {
+                    ok.style.display    =   "block";
+                    notok.style.display    =   "none";
+                }
+                if (response == 1)
+                {
+                    ok.style.display    =   "none"
+                    notok.style.display    =   "block"
+                }
+            }
+        xhttp.open("POST", "./ajax_calls/check_email.php?email="+email.value);
+        xhttp.send();
+
         })
     </script>
 </body>

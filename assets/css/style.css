@@ -59,4 +59,16 @@
 }
 .welcome_message span {
   color: blue;
-}/*# sourceMappingURL=style.css.map */
+}
+
+span {
+  display: none;
+}
+
+.ok {
+  color: green;
+}
+
+.not_ok {
+  color: red;
+}

@@ -13,6 +13,6 @@
     }
     else
     {
-        echo "Connected Successfully";
+        // echo "Connected Successfully";
     }
 ?>

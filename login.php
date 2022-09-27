@@ -11,7 +11,7 @@
     <?php include "./inc/conn.php" ?>
     <div class="login_container">
         <form action="" method="post" class="login_form">
-            <input type="text" name="username" id="username" placeholder="Enter username or email">
+            <input type="text" name="username" id="username" placeholder="Enter username or email" required>
             <input type="password" name="password" id="password" placeholder="Enter password">
             <button type="submit" name="submit">Login</button>
         </form>
