@@ -8,6 +8,10 @@
 {
     display: flex;
     justify-content: center;
+    .ok, .not_ok
+    {
+        display: none;
+    }
 }
 .login_form
 {
@@ -41,13 +45,11 @@
     font-weight: 700;
     span
     {
+        display: block!important;
         color: blue;
     }
 }
-span
-{
-    display: none;
-}
+
 .ok
 {
     color: green;

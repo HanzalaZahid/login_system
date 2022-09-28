@@ -1,3 +1,10 @@
+<?php
+    include "./inc/check_login.php";
+    if (!check_login())
+    {
+        header("location: login.php");
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,7 +16,7 @@
 </head>
 <body>
     <div class="welcome_message">
-        Welcome <span>Username</span>
+        Welcome <span><?php echo $_SESSION['username']; ?></span>
     </div>
 </body>
 </html>

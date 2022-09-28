@@ -13,6 +13,9 @@
       -ms-flex-pack: center;
           justify-content: center;
 }
+.login_container .ok, .login_container .not_ok {
+  display: none;
+}
 
 .login_form {
   display: -webkit-box;
@@ -58,11 +61,8 @@
   font-weight: 700;
 }
 .welcome_message span {
+  display: block !important;
   color: blue;
-}
-
-span {
-  display: none;
 }
 
 .ok {
