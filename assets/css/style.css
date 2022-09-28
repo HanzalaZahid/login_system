@@ -59,10 +59,15 @@
 .welcome_message {
   font-size: 30px;
   font-weight: 700;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 48px;
 }
 .welcome_message span {
-  display: block !important;
+  display: inline_block !important;
   color: blue;
+  margin-left: 22px;
 }
 
 .ok {
@@ -71,4 +76,17 @@
 
 .not_ok {
   color: red;
+}
+
+.logout_button {
+  color: black;
+  padding: 6px 16px;
+  border: 1px solid black;
+  background-color: white;
+  text-decoration: none;
+  margin-left: 100px;
+}
+.logout_button:hover {
+  color: white;
+  background-color: black;
 }

@@ -43,10 +43,13 @@
 {
     font-size: 30px;
     font-weight: 700;
+    display: flex;
+    margin-bottom: 48px;
     span
     {
-        display: block!important;
+        display: inline_block!important;
         color: blue;
+        margin-left: 22px;
     }
 }
 
@@ -57,4 +60,19 @@
 .not_ok
 {
     color: red;
+}
+
+.logout_button
+{
+    color: black;
+    padding: 6px 16px;
+    border: 1px solid black;
+    background-color: white;
+    text-decoration: none;
+    margin-left: 100px;
+    &:hover
+    {
+        color: white;
+        background-color: black;
+    }
 }
